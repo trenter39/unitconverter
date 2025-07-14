@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="titleText">Unit Converter</h1>
+    <select id="categorySelect">
+        <option value="lengthForm">Length</option>
+        <option value="massForm">Mass</option>
+        <option value="temperatureForm">Temperature</option>
+    </select>
+    <div id="container">
+        <div id="lengthForm" class="form-section" style="display: flex;">
+            <div>
+                <label for="lengthValue">Enter the length to convert</label>
+                <input type="text" id="lengthValue">
+            </div>
+            <div>
+                <label for="lengthFrom">Unit to Convert from</label>
+                <select id="lengthFrom">
+                    <option value="kilometer" data-short="km" selected>Kilometer</option>
+                    <option value="meter" data-short="m">Meter</option>
+                    <option value="centimeter" data-short="cm">Centimeter</option>
+                    <option value="millimeter" data-short="mm">Millimeter</option>
+                    <option value="mile" data-short="mi">Mile</option>
+                    <option value="yard" data-short="yd">Yard</option>
+                    <option value="foot" data-short="ft">Foot</option>
+                    <option value="inch" data-short="in">Inch</option>
+                </select>
+            </div>
+            <div>
+                <label for="lengthTo">Unit to Convert to</label>
+                <select id="lengthTo">
+                    <option value="kilometer" data-short="km">Kilometer</option>
+                    <option value="meter" data-short="m" selected>Meter</option>
+                    <option value="centimeter" data-short="cm">Centimeter</option>
+                    <option value="millimeter" data-short="mm">Millimeter</option>
+                    <option value="mile" data-short="mi">Mile</option>
+                    <option value="yard" data-short="yd">Yard</option>
+                    <option value="foot" data-short="ft">Foot</option>
+                    <option value="inch" data-short="in">Inch</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="massForm" class="form-section" style="display:none">
+            <div>
+                <label for="massValue">Enter the mass to convert</label>
+                <input type="text" id="massValue">
+            </div>
+            <div>
+                <label for="massFrom">Unit to Convert from</label>
+                <select id="massFrom">
+                    <option value="tonne" data-short="t">Tonne</option>
+                    <option value="kilogram" data-short="kg" selected>Kilogram</option>
+                    <option value="gram" data-short="g">Gram</option>
+                    <option value="milligram" data-short="mg">Milligram</option>
+                    <option value="pound" data-short="lb">Pound</option>
+                    <option value="ounce" data-short="oz">Ounce</option>
+                </select>
+            </div>
+            <div>
+                <label for="massTo">Unit to Convert to</label>
+                <select id="massTo">
+                    <option value="tonne" data-short="t">Tonne</option>
+                    <option value="kilogram" data-short="kg">Kilogram</option>
+                    <option value="gram" data-short="g" selected>Gram</option>
+                    <option value="milligram" data-short="mg">Milligram</option>
+                    <option value="pound" data-short="lb">Pound</option>
+                    <option value="ounce" data-short="oz">Ounce</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="temperatureForm" class="form-section" style="display: none;">
+            <div>
+                <label for="tempValue">Enter the temperature to convert</label>
+                <input type="text" id="tempValue">
+            </div>
+            <div>
+                <label for="tempFrom">Unit to Convert from</label>
+                <select id="tempFrom">
+                    <option value="celsius" data-short="°C" selected>Degree Celsius</option>
+                    <option value="fahrenheit" data-short="°F">Fahrenheit</option>
+                    <option value="kelvin" data-short="K">Kelvin</option>
+                </select>
+            </div>
+            <div>
+                <label for="tempTo">Unit to Convert to</label>
+                <select id="tempTo">
+                    <option value="celsius" data-short="°C">Degree Celsius</option>
+                    <option value="fahrenheit" data-short="°F" selected>Fahrenheit</option>
+                    <option value="kelvin" data-short="K">Kelvin</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="resultForm" style="display: none; flex-direction: column;">
+            <p>Result of your calculation</p>
+            <h1 id="resultText"></h1>
+            <input id="resetButton" type="button" value="Reset">
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
