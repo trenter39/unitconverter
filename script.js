@@ -208,6 +208,8 @@ function converter(value, from, to, sF, sT, currForm) {
     if (from === to) return value;
     let convertedValue = conversionRates[from]?.[to]?.(Number(value)) ?? NaN;
     if (!Number.isInteger(convertedValue)) convertedValue = convertedValue.toFixed(2);
+    if(String(value).length > 20) value = Number(value).toExponential();
+    if(String(convertedValue).length > 20) convertedValue = Number(convertedValue).toExponential();
     resultText.innerHTML = `${value} ${sF} = ${convertedValue} ${sT}`;
     resultForm.style.display = "flex";
     document.getElementById(currForm).style.display = "none";
