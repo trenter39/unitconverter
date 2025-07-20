@@ -1,8 +1,6 @@
 # Unit Converter 
 
-a simple and responsive web-based unit converter that allows to convert between various units of **Length**, **Mass** and **Temperature**
-
-units: length - km, m, cm, mm, mi, yd, ft, in; mass - t, kg, g, mg, lb, oz; temperature - °C, °F, K
+a responsive web-based unit converter that allows to convert between various units of **Area**, **Data Storage**, **Energy**, **Frequency**, **Length**, **Mass**, **Power**, **Pressure**, **Speed**, **Temperature**, **Time** and **Volume**
 
 Unit Converter can be viewed in detail here: https://trenter39.github.io/unitconverter/
 

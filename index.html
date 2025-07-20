@@ -11,11 +11,140 @@
 <body>
     <h1 id="titleText">Unit Converter</h1>
     <select id="categorySelect">
-        <option value="lengthForm">Length</option>
+        <option value="areaForm">Area</option>
+        <option value="dataStorageForm">Data Storage</option>
+        <option value="energyForm">Energy</option>
+        <option value="frequencyForm">Frequency</option>
+        <option value="lengthForm" selected>Length</option>
         <option value="massForm">Mass</option>
+        <option value="powerForm">Power</option>
+        <option value="pressureForm">Pressure</option>
+        <option value="speedForm">Speed</option>
         <option value="temperatureForm">Temperature</option>
+        <option value="timeForm">Time</option>
+        <option value="volumeForm">Volume</option>
     </select>
     <div id="container">
+        <div id="areaForm" class="form-section" style="display: none;">
+            <div>
+                <label for="areaValue">Enter the area to convert</label>
+                <input type="text" id="areaValue">
+            </div>
+            <div>
+                <label for="areaFrom">Unit to Convert from</label>
+                <select id="areaFrom">
+                    <option value="square_kilometer" data-short="km²" selected>Square Kilometer</option>
+                    <option value="square_meter" data-short="m²">Square Meter</option>
+                    <option value="square_mile" data-short="mi²">Square Mile</option>
+                    <option value="square_yard" data-short="yd²">Square Yard</option>
+                    <option value="square_foot" data-short="ft²">Square Foot</option>
+                    <option value="square_inch" data-short="in²">Square Inch</option>
+                    <option value="hectare" data-short="ha">Hectare</option>
+                    <option value="acre" data-short="ac">Acre</option>
+                </select>
+            </div>
+            <div>
+                <label for="areaTo">Unit to Convert to</label>
+                <select id="areaTo">
+                    <option value="square_kilometer" data-short="km²">Square Kilometer</option>
+                    <option value="square_meter" data-short="m²" selected>Square Meter</option>
+                    <option value="square_mile" data-short="mi²">Square Mile</option>
+                    <option value="square_yard" data-short="yd²">Square Yard</option>
+                    <option value="square_foot" data-short="ft²">Square Foot</option>
+                    <option value="square_inch" data-short="in²">Square Inch</option>
+                    <option value="hectare" data-short="ha">Hectare</option>
+                    <option value="acre" data-short="ac">Acre</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="dataStorageForm" class="form-section" style="display: none;">
+            <div>
+                <label for="dataStorageValue">Enter the data storage to convert</label>
+                <input type="text" id="dataStorageValue">
+            </div>
+            <div>
+                <label for="dataStorageFrom">Unit to Convert from</label>
+                <select id="dataStorageFrom">
+                    <option value="bit" data-short="b">Bit</option>
+                    <option value="byte" data-short="B" selected>Byte</option>
+                    <option value="kilobyte" data-short="KB">Kilobyte</option>
+                    <option value="megabyte" data-short="MB">Megabyte</option>
+                    <option value="gigabyte" data-short="GB">Gigabyte</option>
+                    <option value="terabyte" data-short="TB">Terabyte</option>
+                </select>
+            </div>
+            <div>
+                <label for="dataStorageTo">Unit to Convert to</label>
+                <select id="dataStorageTo">
+                    <option value="bit" data-short="b">Bit</option>
+                    <option value="byte" data-short="B">Byte</option>
+                    <option value="kilobyte" data-short="KB" selected>Kilobyte</option>
+                    <option value="megabyte" data-short="MB">Megabyte</option>
+                    <option value="gigabyte" data-short="GB">Gigabyte</option>
+                    <option value="terabyte" data-short="TB">Terabyte</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="energyForm" class="form-section" style="display: none;">
+            <div>
+                <label for="energyValue">Enter the energy to convert</label>
+                <input type="text" id="energyValue">
+            </div>
+            <div>
+                <label for="energyFrom">Unit to Convert from</label>
+                <select id="energyFrom">
+                    <option value="joule" data-short="J" selected>Joule</option>
+                    <option value="kilojoule" data-short="kJ">Kilojoule</option>
+                    <option value="gram_calorie" data-short="cal">Gram calorie</option>
+                    <option value="kilocalorie" data-short="kcal">Kilocalorie</option>
+                    <option value="watt_hour" data-short="Wh">Watt hour</option>
+                    <option value="kilowatt_hour" data-short="kWh">Kilowatt-hour</option>
+                    <option value="electronvolt" data-short="eV">Electronvolt</option>
+                    <option value="foot_pound" data-short="ft-lb">Foot-pound</option>
+                </select>
+            </div>
+            <div>
+                <label for="energyTo">Unit to Convert to</label>
+                <select id="energyTo">
+                    <option value="joule" data-short="J">Joule</option>
+                    <option value="kilojoule" data-short="kJ" selected>Kilojoule</option>
+                    <option value="gram_calorie" data-short="cal">Gram calorie</option>
+                    <option value="kilocalorie" data-short="kcal">Kilocalorie</option>
+                    <option value="watt_hour" data-short="Wh">Watt hour</option>
+                    <option value="kilowatt_hour" data-short="kWh">Kilowatt-hour</option>
+                    <option value="electronvolt" data-short="eV">Electronvolt</option>
+                    <option value="foot_pound" data-short="ft-lb">Foot-pound</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="frequencyForm" class="form-section" style="display: none;">
+            <div>
+                <label for="frequencyValue">Enter the frequency to convert</label>
+                <input type="text" id="frequencyValue">
+            </div>
+            <div>
+                <label for="frequencyFrom">Unit to Convert from</label>
+                <select id="frequencyFrom">
+                    <option value="hertz" data-short="Hz" selected>Hertz</option>
+                    <option value="kilohertz" data-short="kHz">Kilohertz</option>
+                    <option value="megahertz" data-short="MHz">Megahertz</option>
+                    <option value="gigahertz" data-short="GHz">Gigahertz</option>
+                </select>
+            </div>
+            <div>
+                <label for="frequencyTo">Unit to Convert to</label>
+                <select id="frequencyTo">
+                    <option value="hertz" data-short="Hz">Hertz</option>
+                    <option value="kilohertz" data-short="kHz" selected>Kilohertz</option>
+                    <option value="megahertz" data-short="MHz">Megahertz</option>
+                    <option value="gigahertz" data-short="GHz">Gigahertz</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
         <div id="lengthForm" class="form-section" style="display: flex;">
             <div>
                 <label for="lengthValue">Enter the length to convert</label>
@@ -78,25 +207,176 @@
             </div>
             <input class="convertButton" type="button" value="Convert">
         </div>
-        <div id="temperatureForm" class="form-section" style="display: none;">
+        <div id="powerForm" class="form-section" style="display: none;">
             <div>
-                <label for="tempValue">Enter the temperature to convert</label>
-                <input type="text" id="tempValue">
+                <label for="powerValue">Enter the power to convert</label>
+                <input type="text" id="powerValue">
             </div>
             <div>
-                <label for="tempFrom">Unit to Convert from</label>
-                <select id="tempFrom">
+                <label for="powerFrom">Unit to Convert from</label>
+                <select id="powerFrom">
+                    <option value="watt" data-short="W" selected>Watt</option>
+                    <option value="kilowatt" data-short="kW">Kilowatt</option>
+                    <option value="megawatt" data-short="MW">Megawatt</option>
+                    <option value="horsepower" data-short="hp">Horsepower</option>
+                </select>
+            </div>
+            <div>
+                <label for="powerTo">Unit to Convert to</label>
+                <select id="powerTo">
+                    <option value="watt" data-short="W">Watt</option>
+                    <option value="kilowatt" data-short="kW" selected>Kilowatt</option>
+                    <option value="megawatt" data-short="MW">Megawatt</option>
+                    <option value="horsepower" data-short="hp">Horsepower</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="pressureForm" class="form-section" style="display: none;">
+            <div>
+                <label for="pressureValue">Enter the pressure to convert</label>
+                <input type="text" id="pressureValue">
+            </div>
+            <div>
+                <label for="pressureFrom">Unit to Convert from</label>
+                <select id="pressureFrom">
+                    <option value="bar" data-short="bar" selected>Bar</option>
+                    <option value="pascal" data-short="Pa">Pascal</option>
+                    <option value="psi" data-short="psi">Pound per square inch</option>
+                    <option value="atmosphere" data-short="atm">Atmosphere</option>
+                    <option value="torr" data-short="Torr">Torr</option>
+                </select>
+            </div>
+            <div>
+                <label for="pressureTo">Unit to Convert to</label>
+                <select id="pressureTo">
+                    <option value="bar" data-short="bar">Bar</option>
+                    <option value="pascal" data-short="Pa" selected>Pascal</option>
+                    <option value="psi" data-short="psi">Pound per square inch</option>
+                    <option value="atmosphere" data-short="atm">Atmosphere</option>
+                    <option value="torr" data-short="Torr">Torr</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="speedForm" class="form-section" style="display: none;">
+            <div>
+                <label for="speedValue">Enter the speed to convert</label>
+                <input type="text" id="speedValue">
+            </div>
+            <div>
+                <label for="speedFrom">Unit to Convert from</label>
+                <select id="speedFrom">
+                    <option value="mile_per_hour" data-short="mph" selected>Mile per hour</option>
+                    <option value="foot_per_second" data-short="ft/s">Foot per second</option>
+                    <option value="meter_per_second" data-short="m/s">Meter per second</option>
+                    <option value="kilometer_per_hour" data-short="km/h">Kilometer per hour</option>
+                    <option value="knot" data-short="kn">Knot</option>
+                </select>
+            </div>
+            <div>
+                <label for="speedTo">Unit to Convert to</label>
+                <select id="speedTo">
+                    <option value="mile_per_hour" data-short="mph">Mile per hour</option>
+                    <option value="foot_per_second" data-short="ft/s" selected>Foot per second</option>
+                    <option value="meter_per_second" data-short="m/s">Meter per second</option>
+                    <option value="kilometer_per_hour" data-short="km/h">Kilometer per hour</option>
+                    <option value="knot" data-short="kn">Knot</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="temperatureForm" class="form-section" style="display: none;">
+            <div>
+                <label for="temperatureValue">Enter the temperature to convert</label>
+                <input type="text" id="temperatureValue">
+            </div>
+            <div>
+                <label for="temperatureFrom">Unit to Convert from</label>
+                <select id="temperatureFrom">
                     <option value="celsius" data-short="°C" selected>Degree Celsius</option>
                     <option value="fahrenheit" data-short="°F">Fahrenheit</option>
                     <option value="kelvin" data-short="K">Kelvin</option>
                 </select>
             </div>
             <div>
-                <label for="tempTo">Unit to Convert to</label>
-                <select id="tempTo">
+                <label for="temperatureTo">Unit to Convert to</label>
+                <select id="temperatureTo">
                     <option value="celsius" data-short="°C">Degree Celsius</option>
                     <option value="fahrenheit" data-short="°F" selected>Fahrenheit</option>
                     <option value="kelvin" data-short="K">Kelvin</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="timeForm" class="form-section" style="display: none;">
+            <div>
+                <label for="timeValue">Enter the time to convert</label>
+                <input type="text" id="timeValue">
+            </div>
+            <div>
+                <label for="timeFrom">Unit to Convert from</label>
+                <select id="timeFrom">
+                    <option value="nanosecond" data-short="ns">Nanosecond</option>
+                    <option value="macrosecond" data-short="μs">Macrosecond</option>
+                    <option value="millisecond" data-short="ms">Millisecond</option>
+                    <option value="second" data-short="s" selected>Second</option>
+                    <option value="minute" data-short="min">Minute</option>
+                    <option value="hour" data-short="h">Hour</option>
+                    <option value="day" data-short="d">Day</option>
+                    <option value="week" data-short="wk">Week</option>
+                    <option value="month" data-short="mo">Month</option>
+                    <option value="year" data-short="yr">Year</option>
+                    <option value="decade" data-short="dec">Decade</option>
+                    <option value="century" data-short="c">Century</option>
+                </select>
+            </div>
+            <div>
+                <label for="timeTo">Unit to Convert to</label>
+                <select id="timeTo">
+                    <option value="nanosecond" data-short="ns">Nanosecond</option>
+                    <option value="macrosecond" data-short="μs">Macrosecond</option>
+                    <option value="millisecond" data-short="ms">Millisecond</option>
+                    <option value="second" data-short="s">Second</option>
+                    <option value="minute" data-short="min" selected>Minute</option>
+                    <option value="hour" data-short="h">Hour</option>
+                    <option value="day" data-short="d">Day</option>
+                    <option value="week" data-short="wk">Week</option>
+                    <option value="month" data-short="mo">Month</option>
+                    <option value="year" data-short="yr">Year</option>
+                    <option value="decade" data-short="dec">Decade</option>
+                    <option value="century" data-short="c">Century</option>
+                </select>
+            </div>
+            <input class="convertButton" type="button" value="Convert">
+        </div>
+        <div id="volumeForm" class="form-section" style="display: none;">
+            <div>
+                <label for="volumeValue">Enter the volume to convert</label>
+                <input type="text" id="volumeValue">
+            </div>
+            <div>
+                <label for="volumeFrom">Unit to Convert from</label>
+                <select id="volumeFrom">
+                    <option value="liter" data-short="L" selected>Liter</option>
+                    <option value="millimeter" data-short="mL">Milliliter</option>
+                    <option value="cubic_meter" data-short="m³">Cubic Meter</option>
+                    <option value="gallon" data-short="gal">Gallon</option>
+                    <option value="pint" data-short="pt">Pint</option>
+                    <option value="cup" data-short="cup">Cup</option>
+                    <option value="cubic_inch" data-short="in³">Cubic Inch</option>
+                </select>
+            </div>
+            <div>
+                <label for="volumeTo">Unit to Convert to</label>
+                <select id="volumeTo">
+                    <option value="liter" data-short="L">Liter</option>
+                    <option value="millimeter" data-short="mL" selected>Milliliter</option>
+                    <option value="cubic_meter" data-short="m³">Cubic Meter</option>
+                    <option value="gallon" data-short="gal">Gallon</option>
+                    <option value="pint" data-short="pt">Pint</option>
+                    <option value="cup" data-short="cup">Cup</option>
+                    <option value="cubic_inch" data-short="in³">Cubic Inch</option>
                 </select>
             </div>
             <input class="convertButton" type="button" value="Convert">
@@ -108,6 +388,6 @@
         </div>
     </div>
 </body>
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 
 </html>

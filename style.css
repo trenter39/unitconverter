@@ -21,10 +21,10 @@ h1 {
 }
 
 #container {
+    border: 1px solid #ccc;
     background-color: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 500px;
     display: flex;
@@ -106,7 +106,7 @@ p {
 #resultText {
     margin-top: 0px;
     margin-bottom: 20px;
-    word-break:break-word;
+    word-break: break-word;
 }
 
 @media only screen and (max-width: 640px) {
